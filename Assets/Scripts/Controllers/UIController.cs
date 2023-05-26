@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour
 
     public void UpdateLifes(int lifeCount)
     {
+        Debug.LogError(lifeCount);
         _textMeshPro.text = lifeCount.ToString();
     }
 }

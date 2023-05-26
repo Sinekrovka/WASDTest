@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1365597402085957446}
   - component: {fileID: -5008511118611284611}
   - component: {fileID: 2558201219651317473}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
+  attack: 0
 --- !u!114 &2558201219651317473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 10
+  attack: 0
 --- !u!1 &1365597403374861017
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ GameObject:
   - component: {fileID: 1365597403374860997}
   - component: {fileID: 1365597403374860998}
   - component: {fileID: 1365597403374860999}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

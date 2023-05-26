@@ -40,13 +40,16 @@ public class EnemiesController : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(0.1f, 1.5f));
         _pool[0].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
         _pool[0].gameObject.SetActive(true);
+        _pool[0].attack = true;
         _pool.RemoveAt(0);
         StartCoroutine(SpawnEnemies());
     }
 
     public void KillEnemy(Enemy enemy)
     {
-        enemy.gameObject.SetActive(false);
+        enemy.attack = false;
         _pool.Add(enemy);
+        enemy.gameObject.SetActive(false);
+        
     }
 }

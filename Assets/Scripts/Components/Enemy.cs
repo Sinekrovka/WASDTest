@@ -11,9 +11,11 @@ public class Enemy : MonoBehaviour, IEnemy
     private int _reserveHealth;
     private Transform _player;
     private NavMeshAgent _agent;
+    public bool attack;
 
     void Start()
     {
+        attack = true;
         _reserveHealth = _health;
         _agent = GetComponent<NavMeshAgent>();
     }
@@ -21,7 +23,14 @@ public class Enemy : MonoBehaviour, IEnemy
     // Update is called once per frame
     void Update()
     {
-        _agent.destination = _player.position;
+        if (attack)
+        {
+            _agent.destination = _player.position;
+        }
+        else
+        {
+            _agent.ResetPath();
+        }
     }
 
     public void Damage(int damage)

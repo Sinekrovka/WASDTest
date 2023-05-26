@@ -403,7 +403,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1647735508}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &192168343
 MonoBehaviour:
@@ -449,7 +449,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1647735508}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &336469911
 MonoBehaviour:
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 743080238}
   - component: {fileID: 743080237}
   - component: {fileID: 743080236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,12 +713,11 @@ GameObject:
   - component: {fileID: 744049722}
   - component: {fileID: 744049721}
   - component: {fileID: 744049720}
-  - component: {fileID: 744049726}
   - component: {fileID: 744049719}
   - component: {fileID: 744049723}
   - component: {fileID: 744049724}
   - component: {fileID: 744049725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,19 +852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifes: 3
---- !u!114 &744049726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744049718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5dadcfd0172d804f95c06f7aab2c6eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifes: 0
 --- !u!1 &862026595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1482,7 @@ GameObject:
   - component: {fileID: 1351031592}
   - component: {fileID: 1351031591}
   - component: {fileID: 1351031594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1608,7 +1594,7 @@ GameObject:
   - component: {fileID: 1510055815}
   - component: {fileID: 1510055814}
   - component: {fileID: 1510055817}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1723,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1647735508}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1602385276
 MonoBehaviour:
@@ -1791,9 +1777,9 @@ Transform:
   - {fileID: 1915211009}
   - {fileID: 601260868}
   - {fileID: 1250125430}
+  - {fileID: 336469910}
   - {fileID: 1602385275}
   - {fileID: 192168342}
-  - {fileID: 336469910}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1806,7 +1792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747374776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}

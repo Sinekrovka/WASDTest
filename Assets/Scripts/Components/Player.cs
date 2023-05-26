@@ -14,14 +14,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out IEnemy enemy))
+        lifes--;
+        UIController.Instance.UpdateLifes(lifes);
+        if (lifes <= 0)
         {
-            lifes--;
-            UIController.Instance.UpdateLifes(lifes);
-            if (lifes <= 0)
-            {
-                SceneManager.LoadScene(1);
-            }
+            SceneManager.LoadScene(1);
         }
     }
 }
