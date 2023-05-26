@@ -28,16 +28,24 @@ public class BulletPoolsController : MonoBehaviour
         }
     }
 
-    public void CreateBullet(Vector3 newPosBullet, int damage, float time, Vector3 playerPosition)
+    public void CreateBullet(int damage, Transform weapon)
     {
         if (_bullets.Count > 0)
         {
             Bullet bull = _bullets[0];
             bull.SetDamage(damage);
-            bull.transform.position = playerPosition;
+            Transform oldParent = bull.transform.parent;
+            bull.transform.position = weapon.position;
+            bull.transform.SetParent(weapon);
             _bullets.RemoveAt(0);
             bull.gameObject.SetActive(true);
-            bull.transform.DOMove(newPosBullet, time).SetEase(Ease.Linear).OnComplete(delegate { DestroyBullet(bull); });
+            bull.transform.DOLocalMove(Vector3.forward*18, 0.5f)
+                .SetEase(Ease.Linear).OnComplete(delegate
+                {
+                    bull.transform.SetParent(oldParent);
+                    DestroyBullet(bull);
+                });
+            //bull.transform.DOMove(newPosBullet, time).SetEase(Ease.Linear).OnComplete(delegate { DestroyBullet(bull); });
         }
     }
 

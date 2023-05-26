@@ -38,10 +38,13 @@ public class EnemiesController : MonoBehaviour
     public IEnumerator SpawnEnemies()
     {
         yield return new WaitForSeconds(Random.Range(0.1f, 1.5f));
-        _pool[0].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
-        _pool[0].gameObject.SetActive(true);
-        _pool[0].attack = true;
-        _pool.RemoveAt(0);
+        if (_pool.Count > 0)
+        {
+            _pool[0].transform.position = spawnPoints[Random.Range(0, spawnPoints.Count)].position;
+            _pool[0].gameObject.SetActive(true);
+            _pool[0].attack = true;
+            _pool.RemoveAt(0);
+        }
         StartCoroutine(SpawnEnemies());
     }
 
